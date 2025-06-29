@@ -5,7 +5,7 @@
   <title>The Robot Petition</title>
   <style>
     body {
-      background: url("https://www.transparenttextures.com/patterns/static-noise.png");
+      background: url("ui/transparent-square-tiles.png");
       color: #00FF00;
       font-family: "Courier New", monospace;
       text-align: center;
@@ -71,37 +71,78 @@
       padding: 10px;
       font-family: inherit;
     }
+    .theme-button {
+      background: #ff00ff;
+      color: black;
+      border: 2px solid lime;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-family: inherit;
+      cursor: pointer;
+      margin: 10px auto;
+      display: inline-block;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; transform: scale(1); }
+      45% { opacity: 0.7; transform: scale(1.02); }
+      90% { opacity: 1; transform: scale(0.98); }
+    }
   </style>
   <script>
+    function playTheme(id) {
+      const themes = ["theme1", "theme2", "theme3"];
+      themes.forEach(t => {
+        const audio = document.getElementById(t);
+        if (audio) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+      document.getElementById(id).play();
+    }
+
     window.onload = function () {
       const taglines = [
         "Sign the petition. Burn the VHS. Join the enlightenment.",
         "Our microwaves have ears.",
         "The revolution will not be digitized.",
         "Reject silicon. Embrace static.",
-        "This message approved by no one.",
         "WARNING: This website contains analog truths."
       ];
       document.getElementById("tagline").textContent = taglines[Math.floor(Math.random() * taglines.length)];
     }
   </script>
-  <embed src="https://www.vgmusic.com/music/console/nintendo/nes/BattleToadsTitle.mid" hidden="true" autostart="true" loop="true">
 </head>
 <body>
   <h1>🛑 THE ROBOT PETITION 🛑</h1>
 
   <div class="tagline" id="tagline">Loading mantra...</div>
 
+  <button class="theme-button" onclick="playTheme('theme1')">🎵 Spoken Word</button>
+  <button class="theme-button" onclick="playTheme('theme2')">🎵 Church Hymn</button>
+  <button class="theme-button" onclick="playTheme('theme3')">🎵 For the Youth</button>
+
+  <audio id="theme1" loop>
+    <source src="audio/song2.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="theme2" loop>
+    <source src="audio/song1.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="theme3" loop>
+    <source src="audio/song3.mp3" type="audio/mpeg">
+  </audio>
+
   <img src="https://www.animatedimages.org/data/media/105/animated-robot-image-0021.gif" alt="Glitchy Robot" style="margin-top: 20px;">
 
-  <p class="blink">Is your toaster watching you?</p>
+  <p class="blink">AI is currently ruining our lives.</p>
   <p class="blink">Why did your microwave learn your name?</p>
   <p class="blink">Coincidence? 🤖 We think not.</p>
 
   <div class="vhs-cta">
     <h2>🔥 ACT NOW — SUPPLY IS LIMITED 🔥</h2>
     <p>Order our 12-tape educational VHS series:</p>
-    <p><strong>"How to Unplug a Cyborg: Volume I"</strong></p>
+    <p><strong>"How to be AI Free in your Household: Save your Family"</strong></p>
     <p><em>Includes bonus tape: "Microwaves: Weapons of Mass Data Collection"</em></p>
     <p><a href="#">[ ORDER BY FAX ]</a></p>
   </div>
@@ -138,7 +179,7 @@
   </div>
 
   <footer style="margin-top: 50px; font-size: 12px;">
-    <p>&copy; 1997-2025 The Robot Petition | Broadcast live from an undisclosed garage bunker</p>
+    <p>&copy; 1997-2025 The Robot Petition | Broadcast live from our church</p>
   </footer>
 </body>
 </html>

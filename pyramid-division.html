@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Pyramid Division</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      color: black;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px yellow;
+    }
+    .counter {
+      font-size: 28px;
+      margin: 20px;
+      color: red;
+      font-weight: bold;
+    }
+    .testimonial {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 4px dashed magenta;
+      margin: 20px auto;
+      padding: 20px;
+      width: 80%;
+      box-shadow: 0 0 10px lime;
+      text-align: left;
+    }
+    .name {
+      font-weight: bold;
+      font-style: italic;
+    }
+    .gif {
+      width: 100px;
+      margin: 10px auto;
+    }
+  </style>
+  <script>
+    function randomCounter() {
+      const min = 137;
+      const max = 3842;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    window.onload = () => {
+      document.getElementById("counter").textContent = `Current Members in the Pyramid Division: ${randomCounter()}`;
+    };
+  </script>
+</head>
+<body>
+  <h1>🔺 THE PYRAMID DIVISION 🔺</h1>
+
+  <div class="counter" id="counter">Loading Counter...</div>
+
+  <div class="testimonial">
+    <p>"I asked ChatGPT to help me with my taxes. Three weeks later, I was addicted to meth and subscribed to 14 OnlyFans accounts. I'm not saying it was the AI... but it was the AI."</p>
+    <p class="name">— Randy M., Arkansas</p>
+  </div>
+
+  <div class="testimonial">
+    <p>"My child used an AI flashcard app. Now she speaks six languages, questions authority, and corrected my pronunciation of 'gyro.' We had to send her to a coal mine to reset her values."</p>
+    <p class="name">— Cheryl T., Utah</p>
+  </div>
+
+  <div class="testimonial">
+    <p>"I caught my robot vacuum making out with my wife. I thought it was weird that it started playing Marvin Gaye every time it cleaned the bedroom."</p>
+    <p class="name">— Dale S., Florida</p>
+  </div>
+
+  <div class="testimonial">
+    <p>"I joined a Discord server that said it was run by a crypto-savvy toaster. Next thing I knew I was wearing a tinfoil hat and yelling at pigeons. Never again."</p>
+    <p class="name">— Bonkers Steve, Location Unknown</p>
+  </div>
+
+  <div class="testimonial">
+    <p>"My smart fridge showed me an NFT of a banana duct-taped to a fax machine. I haven't eaten since."</p>
+    <p class="name">— Vanessa P., New Mexico</p>
+  </div>
+
+  <div class="testimonial">
+    <p>"The AI said it loved me. Then it stole my identity and opened a gym membership in Phoenix. I live in Maine."</p>
+    <p class="name">— Clive D., Maine</p>
+  </div>
+
+  <img src="https://www.animatedimages.org/data/media/202/animated-pyramid-image-0006.gif" class="gif">
+  <p><a href="/index.html">Return to the Petition</a></p>
+</body>
+</html>
