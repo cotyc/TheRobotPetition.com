@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Robot Petition</title>
+  <style>
+    body {
+      background: url("https://www.transparenttextures.com/patterns/static-noise.png");
+      color: #00FF00;
+      font-family: "Courier New", monospace;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px #FF00FF;
+    }
+    marquee, .tagline {
+      font-size: 22px;
+      color: red;
+      background: black;
+      padding: 10px;
+    }
+    .blink {
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .vhs-cta {
+      border: 3px dashed #FF00FF;
+      background: #111;
+      padding: 20px;
+      margin: 40px;
+      display: inline-block;
+    }
+    .warning {
+      font-size: 20px;
+      color: yellow;
+      margin-top: 30px;
+    }
+    .video-container {
+      position: relative;
+      width: 80%;
+      margin: 20px auto;
+      filter: contrast(120%) brightness(80%) saturate(150%);
+      box-shadow: 0 0 20px #FF00FF;
+    }
+    .video-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(0, 0, 0, 0.1) 2px,
+        rgba(0, 0, 0, 0) 4px
+      );
+      pointer-events: none;
+    }
+    .hidden-hallway {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+    form input, form textarea {
+      margin: 5px;
+      padding: 10px;
+      font-family: inherit;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const taglines = [
+        "Sign the petition. Burn the VHS. Join the enlightenment.",
+        "Our microwaves have ears.",
+        "The revolution will not be digitized.",
+        "Reject silicon. Embrace static.",
+        "This message approved by no one.",
+        "WARNING: This website contains analog truths."
+      ];
+      document.getElementById("tagline").textContent = taglines[Math.floor(Math.random() * taglines.length)];
+    }
+  </script>
+  <embed src="https://www.vgmusic.com/music/console/nintendo/nes/BattleToadsTitle.mid" hidden="true" autostart="true" loop="true">
+</head>
+<body>
+  <h1>🛑 THE ROBOT PETITION 🛑</h1>
+
+  <div class="tagline" id="tagline">Loading mantra...</div>
+
+  <img src="https://www.animatedimages.org/data/media/105/animated-robot-image-0021.gif" alt="Glitchy Robot" style="margin-top: 20px;">
+
+  <p class="blink">Is your toaster watching you?</p>
+  <p class="blink">Why did your microwave learn your name?</p>
+  <p class="blink">Coincidence? 🤖 We think not.</p>
+
+  <div class="vhs-cta">
+    <h2>🔥 ACT NOW — SUPPLY IS LIMITED 🔥</h2>
+    <p>Order our 12-tape educational VHS series:</p>
+    <p><strong>"How to Unplug a Cyborg: Volume I"</strong></p>
+    <p><em>Includes bonus tape: "Microwaves: Weapons of Mass Data Collection"</em></p>
+    <p><a href="#">[ ORDER BY FAX ]</a></p>
+  </div>
+
+  <div>
+    <h3>📬 Join the Petition (and receive our VHS newsletter):</h3>
+    <form name="petition" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="petition">
+      <input name="name" type="text" placeholder="Your Name">
+      <input name="email" type="email" placeholder="Email Address">
+      <textarea name="message" placeholder="Your Anti-Robot Testimony"></textarea>
+      <input type="text" name="bot-field" style="display:none">
+      <br>
+      <input type="submit" value="Join the Movement!">
+    </form>
+  </div>
+
+  <div class="warning">
+    <p>We're not a cult. We're not a scam.</p>
+    <p>We're a <strong>movement</strong>. Possibly interdimensional.</p>
+  </div>
+
+  <img src="https://www.animatedimages.org/data/media/206/animated-warning-image-0010.gif" alt="Warning Light">
+
+  <div class="video-container">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/9C_HReR_McQ?start=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <p class="blink">We reject AI. We reject logic. We accept VHS or gold bullion.</p>
+
+  <div class="hidden-hallway">
+    <p><a href="/secret-door.html">Click here if you hear the static</a></p>
+    <p><a href="/pyramid-division.html">The Pyramid Division welcomes your inquiry</a></p>
+  </div>
+
+  <footer style="margin-top: 50px; font-size: 12px;">
+    <p>&copy; 1997-2025 The Robot Petition | Broadcast live from an undisclosed garage bunker</p>
+  </footer>
+</body>
+</html>
